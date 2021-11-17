@@ -1,0 +1,135 @@
+
+$color-link: #386be0;
+$color-text-select: rgba($color: #fff, $alpha: 0.8);
+$color-text-holder: rgba($color: #fff, $alpha: 0.3);
+$color-background: #231F2C;
+
+$layout-header: 66px;
+$layout-footer: 100px;
+$layout-container: 1200px;
+
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+* flex
+* @param {justify} justify-content: flex-start | flex-end | center | space-between | space-around 
+* @param {align} align-items: flex-start | flex-end | center | baseline | stretch
+* @param {direction} flex-direction: row | row-reverse | column | column-reverse
+*/
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/**
+* 溢出省略号
+* @param {rowCount} 行数
+*/
+@mixin ellipsis($rowCount: 1) {
+  @if $rowCount <= 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $rowCount;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/**
+* 重写滚动条样式
+*/
+@mixin scrollBar() {
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    &-track {
+      background-color: transparent;
+      border-radius: 6px;
+    }
+    &-thumb {
+      background-color: #6E7182;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-corner {
+      display: none;
+    }
+  }
+}
+
+/**
+* 直角等腰三角形
+* @param {size} 尺寸（长边）1:1:1.414
+* @param {color} 颜色
+* @param {direction} 方向
+* @param {rate} 比例，默認1.414
+*/
+@mixin triangle($size: 10px, $color: rgba(0, 0, 0, 0.6), $direction: bottom, $side: 10px) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if ($direction == bottom) {
+    border-width: $size $side 0 $side;
+    border-color: $color transparent transparent transparent;
+  } @else if ($direction == top) {
+    border-width: 0 $side $size $side;
+    border-color: transparent transparent $color transparent;
+  } @else if ($direction == right) {
+    border-width: $side 0 $side $size;
+    border-color: transparent transparent transparent $color;
+  } @else if ($direction == left) {
+    border-width: $side $size $side 0;
+    border-color: transparent $color transparent transparent;
+  }
+}
+
+/**
+* 自定义obs-select图标
+* @param {icon} icon文件名
+*/
+@mixin obsSelectIcon($image: 'filter') {
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('@/assets/images/icon-' + $image + '.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100%;
+  }
+}
+
+@mixin obsInfosIcon($image: '') {
+  &::before {
+    content: '';
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-image: url('@/assets/images/icon-' + $image + '.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 4px;
+  }
+}

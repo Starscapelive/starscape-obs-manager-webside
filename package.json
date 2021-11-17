@@ -1,0 +1,29 @@
+{
+  "name": "obs-plugin-manage",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode mydev ",
+    "build:dev": "vite build --mode development && node build-router.js",
+    "build:stag": "vite build --mode prepare && node build-router.js",
+    "build:master": "vite build --mode production && node build-router.js",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "custom-protocol-check": "^1.2.0",
+    "element3": "^0.0.40",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@vitejs/plugin-vue": "^1.9.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.10",
+    "vite-plugin-html": "^2.0.7",
+    "vue-tsc": "^0.3.0"
+  }
+}

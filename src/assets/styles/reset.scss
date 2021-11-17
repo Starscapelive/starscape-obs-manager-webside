@@ -1,0 +1,145 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+html, body, div, span, applet, object, iframe, main,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, textarea, input, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+  overflow: hidden;
+  min-height: 100vh;
+  line-height: 1.2;
+  background: #fff;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+input, input:focus, textarea, textarea:focus, button {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  -webkit-appearance: none;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+i {
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dm';
+  src: url('../fonts/DIN-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'dr';
+  src: url('../fonts/DIN-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'db';
+  src: url('../fonts/DIN-Bold.otf');
+}
+
+@font-face {
+  font-family: 'dba';
+  src: url('../fonts/DIN-BlackAlternate.otf');
+}
+
+@font-face {
+  font-family: 'dma';
+  src: url('../fonts/DIN-MediumAlternate.otf');
+}
+
+@font-face {
+  font-family: 'sr';
+  src: url('../fonts/Staatliches-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'qr';
+  src: url('../fonts/Questrial-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'mb';
+  src: url('../fonts/Montserrat-Bold.otf');
+}
+
+@font-face {
+  font-family: 'ms';
+  src: url('../fonts/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'mr';
+  src: url('../fonts/Montserrat-Regular.otf');
+}
+
+@font-face {
+  font-family: 'ob';
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'os';
+  src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'or';
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'oebi';
+  src: url('../fonts/OpenSans-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'osi';
+  src: url('../fonts/OpenSans-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'oeb';
+  src: url('../fonts/OpenSans-ExtraBold.ttf');
+}
